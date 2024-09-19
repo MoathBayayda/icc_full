@@ -1,0 +1,552 @@
+{
+	"info": {
+		"_postman_id": "2a63d16b-84bd-4404-8145-38d3a75de722",
+		"name": "icc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27273594"
+	},
+	"item": [
+		{
+			"name": "news operations",
+			"item": [
+				{
+					"name": "GET /news/id?id=",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/news/id?id=24",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"news",
+								"id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "24"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /news?minid=&maxid=",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/news?minId=1&maxId=42",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"news"
+							],
+							"query": [
+								{
+									"key": "minId",
+									"value": "1"
+								},
+								{
+									"key": "maxId",
+									"value": "42"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /news",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \" امتحانات المستوى الأول والثاني\",\r\n    \"description\": \" امتحانات المستوى الأول والثاني لطالبات دورات التلاوة  في شقيه\",\r\n    \"content\": \"ضمن فعاليات المركز الثقافي الإسلامي في الجامعة الأردنية تعقد امتحانات المستوى الأول والثاني لطالبات دورات التلاوة  في شقيه النظري والعملي يوم الأحد والاثنين الموافق التاسع والعاشر من شهر تموز لعام ٢٠٢٣\",\r\n    \"date\": \"2023/7/10\",\r\n    \"urls\": [\r\n        {\r\n            \"src\": \"https://drive.google.com/uc?id=1kaXrzC8_wFUYYTWx1_lWvvzwsA0JH1pc\"\r\n        },\r\n        {\r\n            \"src\": \"https://drive.google.com/uc?id=1tJic_SG14uKshF4ihe_dsOmPZhttJ07s\"\r\n        },\r\n        {\r\n            \"src\": \"https://drive.google.com/uc?id=14MRQ0DzdxxhEUmigNFntKqCyX7JSfoMC\"\r\n        },\r\n        {\r\n            \"src\": \"https://drive.google.com/uc?id=1XE4ackZX73wnoFXaiDwuYpkTcVaKtunK\"\r\n        },\r\n        {\r\n            \"src\": \"https://drive.google.com/uc?id=1fS4HHzTgJdImek8g2K1f9RUNp9HkV9u7\"\r\n        },\r\n        {\r\n            \"src\": \"https://drive.google.com/uc?id=1o3RES84GFWIzjc388MY6wfGI_lKAN73U\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3001/news"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /news?id=",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/news?id=9",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"news"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /news/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"news_id\": 24,\r\n    \"title\": \" امتحانات المستوى الأول والثاني\",\r\n    \"description\": \" امتحانات المستوى الأول والثاني لطالبات دورات التلاوة  في شقيه\",\r\n    \"content\": \"ضمن فعاليات المركز الثقافي الإسلامي في الجامعة الأردنية تعقد امتحانات المستوى الأول والثاني لطالبات دورات التلاوة  في شقيه النظري والعملي يوم الأحد والاثنين الموافق التاسع والعاشر من شهر تموز لعام ٢٠٢٣\",\r\n    \"news_date\": \"2023-07-10\",\r\n    \"src\": [\r\n        \"https://drive.google.com/uc?id=1kaXrzC8_wFUYYTWx1_lWvvzwsA0JH1pc\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3001/news/id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authorization operations",
+			"item": [
+				{
+					"name": "admin auth",
+					"item": [
+						{
+							"name": "POST /loginAdmin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@icc.com\",\r\n    \"password\": \"aa22@AA15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/loginAdmin"
+							},
+							"response": []
+						},
+						{
+							"name": "POST /authAdmin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "localhost:3001/authAdmin"
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /admin",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"admin_id\": 0,\r\n    \"admin_email\": \"admin@icc.jo\",\r\n    \"oldPassword\": \"aa22@AA15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/admin"
+							},
+							"response": []
+						},
+						{
+							"name": "POST /signup/admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"admin_password\": \"aa22@AA12\",\r\n    \"admin_email\": \"admin@icc.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/signup/admin"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "student auth",
+					"item": [
+						{
+							"name": "POST /login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ahmad@example.com\",\r\n    \"password\": \"aa22@AA12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/login"
+							},
+							"response": []
+						},
+						{
+							"name": "POST /auth",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "localhost:3001/auth"
+							},
+							"response": []
+						},
+						{
+							"name": "POST /logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "localhost:3001/logout"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "student operations",
+			"item": [
+				{
+					"name": "Admin only",
+					"item": [
+						{
+							"name": "DELETE /students",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"student_id\": 16\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/students"
+							},
+							"response": []
+						},
+						{
+							"name": "GET /students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3001/students"
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /admin/student",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"student_id\": 22,\r\n    \"national_id\": 12345678901234,\r\n    \"first_name\": \"test\",\r\n    \"last_name\": \"test\",\r\n    \"phone_number\": \"00962786314075\",\r\n    \"city\": \"test\",\r\n    \"country\": \"test\",\r\n    \"street\": \"test\",\r\n    \"email\": \"example@example.com\",\r\n    \"gender\": \"male\",\r\n    \"nationality\": \"test\",\r\n    \"birth_date\": \"2001-02-03\",\r\n    \"certificates\":[]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/admin/student"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "POST /signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"national_id\": 12345678901234,\r\n    \"first_name\": \"ahmad\",\r\n    \"last_name\": \"ahmad\",\r\n    \"phone_number\": \"00962786314075\",\r\n    \"city\": \"amman\",\r\n    \"country\": \"jordan\",\r\n    \"street\": \"al-madina\",\r\n    \"email\": \"ahmad@example.com\",\r\n    \"registration_date\": \"2001-01-01\",\r\n    \"gender\": \"male\",\r\n    \"nationality\": \"jordanian\",\r\n    \"birth_date\": \"2023-09-05\",\r\n    \"password\": \"aa22@AA12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/signup"
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /student",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"national_id\": 12345678901234,\r\n    \"first_name\": \"ahmad\",\r\n    \"last_name\": \"ahmad\",\r\n    \"phone_number\": \"00962786314075\",\r\n    \"city\": \"amman\",\r\n    \"country\": \"jordan\",\r\n    \"street\": \"al-madina\",\r\n    \"email\": \"ahmad@example.com\",\r\n    \"registration_date\": \"2023-07-21\",\r\n    \"gender\": \"male\",\r\n    \"nationality\": \"jordanian\",\r\n    \"birth_date\": \"2001-05-17\",\r\n    \"oldPassword\": \"aa22@AA13\",\r\n    \"newPassword\":\"aa22@AA13\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/student"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "courses operations",
+			"item": [
+				{
+					"name": "admin only",
+					"item": [
+						{
+							"name": "POST /courses",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"hall_name\": \"hall 1 \",\r\n  \"instructor\": \"mohammad al zobi\",\r\n  \"course_name\": \"islamic culture\",\r\n  \"num_students\": 0,\r\n  \"pass_mark\": 50,\r\n  \"starting_time\": 10,\r\n  \"ending_time\": 12,\r\n  \"days\": \"sunday,tuesday,thursday\",\r\n  \"max_students\": 20,\r\n  \"availability\": true,\r\n  \"price\": 50,\r\n  \"duration_hours\": 1,\r\n  \"registration_date\": \"2023-07-05\",\r\n  \"description\": \"description\",\r\n  \"certificates\":[\"src\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/courses"
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE /courses",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/courses"
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /courses",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course_id\": 1,\r\n    \"hall_name\": \"hall 1 \",\r\n    \"instructor\": \"mohammad al zobi\",\r\n    \"course_name\": \"islamic culture\",\r\n    \"num_students\": 0,\r\n    \"pass_mark\": 50,\r\n    \"starting_time\": 10,\r\n    \"ending_time\": 12,\r\n    \"days\": \"sunday,tuesday,thursday\",\r\n    \"max_students\": 20,\r\n    \"availability\": true,\r\n    \"price\": 50,\r\n    \"duration_hours\": 1,\r\n    \"registration_date\": \"2023-07-05\",\r\n    \"description\": \"description\",\r\n    \"certificates\": [\r\n        \"src\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/courses"
+							},
+							"response": []
+						},
+						{
+							"name": "GET /courses/students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/courses/students?course_id=22",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"courses",
+										"students"
+									],
+									"query": [
+										{
+											"key": "course_id",
+											"value": "22"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "public apis",
+					"item": [
+						{
+							"name": "GET /courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3001/courses"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "student only",
+					"item": [
+						{
+							"name": "POST /course",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course_id\": 22,\r\n    \"student_id\": 16\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/course"
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE /course",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course_id\": 14,\r\n    \"student_id\": 14\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/course"
+							},
+							"response": []
+						},
+						{
+							"name": "GET /regcourses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3001/regcourses?student_id=16",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"regcourses"
+									],
+									"query": [
+										{
+											"key": "student_id",
+											"value": "16"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Certificates",
+			"item": [
+				{
+					"name": "admin only",
+					"item": [
+						{
+							"name": "POST /student/certificate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"certificate\": \"https://drive.google.com/file/d/167RPnk7IVB31wbB_hQvrNvZchH5am7_r/preview\",\r\n     \"student_id\": 16\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3001/student/certificate"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "public",
+					"item": []
+				}
+			]
+		}
+	]
+}

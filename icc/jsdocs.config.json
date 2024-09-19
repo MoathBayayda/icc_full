@@ -1,0 +1,26 @@
+{
+  "source": {
+    "include": [
+      "./src/components/.",
+      "./src/hooks/.",
+      "./src/pages/.",
+      "./src/Store/Slices/.",
+      "./src/Store/APIs/.",
+      "./src/Store/.",
+      "./src/."
+    ],
+    "exclude": ["node_modules"]
+  },
+  "plugins": [],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "opts": {
+    "destination": "docs"
+  },
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  }
+}

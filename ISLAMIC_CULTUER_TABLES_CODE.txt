@@ -1,0 +1,160 @@
+create the following tables in the order provided using postgress :
+
+************************************************************************************************
+CREATE TABLE news (
+  news_id SERIAL PRIMARY KEY,
+  title VARCHAR(225) NOT NULL,
+  content VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  news_date DATE NOT NULL
+);
+
+CREATE TABLE course (
+  course_id SERIAL PRIMARY KEY,
+  hall_id VARCHAR(255) NOT NULL,
+  student_ids INT[] NOT NULL,
+  instructor_ids INT[] NOT NULL,
+  course_name VARCHAR(255) NOT NULL,
+  num_students INT NOT NULL,
+  pass_mark INT NOT NULL,
+  starting_time VARCHAR(255) NOT NULL,
+  ending_time VARCHAR(255) NOT NULL,
+  days VARCHAR(255) NOT NULL,
+  max_students INT NOT NULL,
+  availability BOOLEAN NOT NULL,
+  price INT NOT NULL,
+  duration_hours INT NOT NULL,
+  registration_date DATE NOT NULL,
+  description VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE employee (
+  employee_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  phone_number VARCHAR(255) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  start_date DATE NOT NULL,
+  end_date DATE NOT NULL,
+  gender VARCHAR(255) NOT NULL,
+  nationality VARCHAR(255) NOT NULL,
+  birth_date DATE NOT NULL,
+  employee_function VARCHAR(255) NOT NULL,
+  salary INT NOT NULL
+);
+
+CREATE TABLE student (
+  student_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  phone_number VARCHAR(255) NOT NULL,
+  city VARCHAR(255) NOT NULL,
+  country VARCHAR(255) NOT NULL,
+  street VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  registration_date DATE NOT NULL,
+  gender VARCHAR(255) NOT NULL,
+  nationality VARCHAR(255) NOT NULL,
+  birth_date DATE NOT NULL,
+  reg_course_ids INT[] NOT NULL,
+  certificate_ids INT[] NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+
+
+CREATE TABLE hall (
+  hall_id SERIAL PRIMARY KEY,
+  hall_name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE exam_hall(
+  exam_hall_id VARCHAR(255) PRIMARY KEY,
+  exam_hall_name VARCHAR(255) NOT NULL,
+  instructor_ids INT[] NOT NULL
+);
+
+CREATE TABLE reg_course (
+  reg_course_id SERIAL PRIMARY KEY,
+  exam_ids INT[] NOT NULL,
+  hall_id INT NOT NULL,
+  days_of_attendance INT NOT NULL,
+  course_id INT NOT NULL,
+  FOREIGN KEY (hall_id) REFERENCES hall (hall_id),
+  FOREIGN KEY (course_id) REFERENCES course (course_id)
+);
+
+
+
+CREATE TABLE instructor (
+  instructor_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  phone_number VARCHAR(255) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  start_date DATE NOT NULL,
+  end_date DATE NOT NULL,
+  gender VARCHAR(255) NOT NULL,
+  nationality VARCHAR(255) NOT NULL,
+  birth_date DATE NOT NULL,
+  major VARCHAR(255) NOT NULL,
+  salary INT NOT NULL,
+  course_id INT[] NOT NULL
+);
+
+
+CREATE TABLE certificates (
+  certificate_id SERIAL PRIMARY KEY,
+  course_id INT NOT NULL,
+  date DATE NOT NULL,
+  url VARCHAR(255) NOT NULL,
+  student_ids INT[] NOT NULL,
+  FOREIGN KEY (course_id) REFERENCES course (course_id)
+);
+
+CREATE TABLE exam (
+  exam_id SERIAL PRIMARY KEY,
+  exam_name VARCHAR(255) NOT NULL,
+  exam_hall_ids INT[] NOT NULL,
+  attending BOOLEAN NOT NULL,
+  exam_date DATE NOT NULL,
+  starting_time VARCHAR(255) NOT NULL,
+  ending_time VARCHAR(255) NOT NULL,
+  course_id INT NOT NULL,
+  FOREIGN KEY (course_id) REFERENCES course (course_id)
+);
+
+
+************************************************************************************************
+
+news table does not have any relationships with other tables.
+
+course table has the following relationships:
+hall_id in the course table references the hall_id in the hall table.
+student_ids in the course table references the student_id in the student table.
+instructor_ids in the course table references the instructor_id in the instructor table.
+
+employee table does not have any relationships with other tables.
+
+student table has the following relationships:
+reg_course_ids in the student table references the course_id in the course table.
+certificate_ids in the student table references the certificate_id in the certificates table.
+hall table does not have any relationships with other tables.
+exam_hall table does not have any relationships with other tables.
+
+reg_course table has the following relationships:
+exam_ids in the reg_course table references the exam_id in the exam table.
+hall_id in the reg_course table references the hall_id in the hall table.
+course_id in the reg_course table references the course_id in the course table.
+
+instructor table has the following relationships:
+course_id in the instructor table references the course_id in the course table.
+
+certificates table has the following relationship:
+course_id in the certificates table references the course_id in the course table.
+student_ids in the certificates table references the student_id in the student table.
+
+exam table has the following relationship:
+course_id in the exam table references the course_id in the course table.
