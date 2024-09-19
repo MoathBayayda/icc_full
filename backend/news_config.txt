@@ -1,0 +1,55 @@
+first news :
+{
+    "title": "عيد الأضحى المبارك",
+    "description": "احتفل المركز الثقافي الإسلامي  بعيد الأضحى المبارك",
+    "content": "تحت رعاية الاستاذ الدكتور محمود رشيد شديفات مدير المركز الثقافي الإسلامي في الجامعة الأردنية احتفل المركز الثقافي الإسلامي  بعيد الأضحى المبارك حيث تم اداء صلاة العيد ومن ثم تبادل التهاني بالعيد وتقديم الضيافة للمصلين بحضور أعداد كبيرة من أبناء المجتمع المحلي وطلبة الشعوب الإسلامية والعربية ولجنة رعاية مسجد الجامعة في أجواء سادها الفرح والسرور والابتهاج. *كل عام وانتم بخير تقبل الله صالح الأعمال*",
+    "date": "2023/6/19",
+    "urls": [
+        {
+            "src": "https://drive.google.com/uc?id=1vVfoMrFh5rgoGgyJz7Nt6LMbfbTOApgv"
+        },
+        {
+            "src": "https://drive.google.com/uc?id=11brSyeQf1InlbvloDwFzcRnmUsdJon9C"
+        }
+    ]
+}
+second news :
+{
+    "title": "أنشطة المركز الثقافي الإسلامي",
+    "description": "إتقان اللفظ العربي للحروف ومخارجها",
+    "content": "ضمن أنشطة المركز الثقافي الإسلامي لإتقان اللفظ العربي للحروف ومخارجها ، شاركت السيدة الفاضلة عائشة من تركيا بدورة إتقان النطق بمخارج حروف اللغة العربية من خلال جزء عم بإشراف المتطوعة الفاضلة منى الفاعوري ، حيث تنقل الآن ما تعلمته الفاضلة عائشة للأطفال الأتراك لإتقان تلاوة القرآن الكريم",
+    "date": "2023/6/30",
+    "urls": [
+        {
+            "src": "https://drive.google.com/uc?id=1rrPOAAKI6Li6NUZteSeNLsjWjK4BvoAT"
+        }
+    ]
+}
+third news :
+
+{
+    "title": " امتحانات المستوى الأول والثاني",
+    "description": " امتحانات المستوى الأول والثاني لطالبات دورات التلاوة  في شقيه",
+    "content": "ضمن فعاليات المركز الثقافي الإسلامي في الجامعة الأردنية تعقد امتحانات المستوى الأول والثاني لطالبات دورات التلاوة  في شقيه النظري والعملي يوم الأحد والاثنين الموافق التاسع والعاشر من شهر تموز لعام ٢٠٢٣",
+    "date": "2023/7/10",
+    "urls": [
+        {
+            "src": "https://drive.google.com/uc?id=1kaXrzC8_wFUYYTWx1_lWvvzwsA0JH1pc"
+        },
+        {
+            "src": "https://drive.google.com/uc?id=1tJic_SG14uKshF4ihe_dsOmPZhttJ07s"
+        },
+        {
+            "src": "https://drive.google.com/uc?id=14MRQ0DzdxxhEUmigNFntKqCyX7JSfoMC"
+        },
+        {
+            "src": "https://drive.google.com/uc?id=1XE4ackZX73wnoFXaiDwuYpkTcVaKtunK"
+        },
+        {
+            "src": "https://drive.google.com/uc?id=1fS4HHzTgJdImek8g2K1f9RUNp9HkV9u7"
+        },
+        {
+            "src": "https://drive.google.com/uc?id=1o3RES84GFWIzjc388MY6wfGI_lKAN73U"
+        }
+    ]
+}

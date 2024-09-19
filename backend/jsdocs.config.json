@@ -1,0 +1,25 @@
+{
+  "source": {
+    "include": [
+      "./Controllers/.",
+      "./Models/.",
+      "./Routes/.",
+      "./Validations/news/.",
+      "./Validations/users/.",
+      "."
+    ],
+    "exclude": ["node_modules"]
+  },
+  "plugins": [],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "opts": {
+    "destination": "docs"
+  },
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  }
+}
